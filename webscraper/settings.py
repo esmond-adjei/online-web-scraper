@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-ght5gr!-x6t#twbo^-9q8m)x!ifbauz+bieo1ko$7fcgl-pme(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+            'xmon.pythonanywhere.com'
+        ]
 
 
 # Application definition
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'webscraper.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
