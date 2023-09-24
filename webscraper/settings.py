@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-ght5gr!-x6t#twbo^-9q8m)x!ifbauz+bieo1ko$7fcgl-pme(
 DEBUG = False
 
 ALLOWED_HOSTS = [
-            'xmon.pythonanywhere.com',
             '127.0.0.1',
-            ' https://movie-scraper-1e1eecd0fdee.herokuapp.com/'
+            'https://movie-scraper-1e1eecd0fdee.herokuapp.com'
+            'xmon.pythonanywhere.com',
         ]
 
 
