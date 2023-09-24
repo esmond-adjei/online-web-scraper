@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ght5gr!-x6t#twbo^-9q8m)x!ifbauz+bieo1ko$7fcgl-pme('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
             'xmon.pythonanywhere.com',
@@ -123,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
+# STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
 
 
 # Default primary key field type
