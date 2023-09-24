@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
             '127.0.0.1',
-            'https://movie-scraper-1e1eecd0fdee.herokuapp.com'
+            'movie-scraper-1e1eecd0fdee.herokuapp.com'
             'xmon.pythonanywhere.com',
         ]
 
