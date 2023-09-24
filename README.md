@@ -12,6 +12,6 @@
 
 #### SNAPSHOTS
 
-![movie-scraper-screenshot](./src/docs/movie-scraper-screenshot-28-11-2022.png)
+![movie-scraper-screenshot](./assets/docs/movie-scraper-screenshot-28-11-2022.png)
 
-![movie-scraper-snapshot-deadline](./src/docs/movie-scraper-snapshot-deadline.png)
+![movie-scraper-snapshot-deadline](./assets/docs/movie-scraper-snapshot-deadline.png)
