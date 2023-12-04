@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    '127.0.0.1',
     'movie-scraper-1e1eecd0fdee.herokuapp.com/',
     'movie.esmond.tech/',
 ]
