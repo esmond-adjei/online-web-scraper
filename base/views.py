@@ -46,7 +46,8 @@ def loginPage(request):
 
 def index(request):
 
-    mov_obj = [mo for mo in Movie.objects.filter().order_by('?')[:3]]
+    top_3 = Movie.objects.filter().order_by('?')[:3]
+    mov_obj = [mo for mo in top_3] if top_3 else []
     PAYLOAD = {'page_title': 'Scrape a movie',
                'latest_movies': mov_obj}
     return render(request, 'index.html', {'payload': PAYLOAD})
