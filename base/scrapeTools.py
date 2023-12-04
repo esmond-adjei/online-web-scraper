@@ -1,7 +1,7 @@
 import bs4
 import requests
-import io
-from PIL import Image
+# import io
+# from PIL import Image
 
 """
     1. obtain address
@@ -130,35 +130,35 @@ def compareLists(lista, listb):
 # GET IMAGE
 
 
-def IMDB(movieKeyword, compress=False, compression_factor=1):
-    """ download image from IMDB.COM and compresses the file"""
+# def IMDB(movieKeyword, compress=False, compression_factor=1):
+#     """ download image from IMDB.COM and compresses the file"""
 
-    # create IMDB equivalent address
-    imgAddress = 'https://imdb.com/find?q='+movieKeyword.replace(' ', '+')
-    imgAddress = 'https://imdb.com'+find_text(movieKeyword, find_tag('a', scrape(
-        imgAddress)))[0].get("href")     # scrape and get first link with KEYWORD in TEXT
-    # scrape and select first link with 'mediaviewer' in LINK
-    imageLink = 'https://imdb.com' + \
-        find_by_keyword('mediaviewer', find_tag(
-            'a', scrape(imgAddress)))[0].get("href")
-    # choose image from here
-    image = find_tag('img', scrape(imageLink))[0].get("src")
-    # scrape the image bytes
-    # image = scrape(image).content
-    # Next three lines compress the image file
-    # image = Image.open(io.BytesIO(image))
+#     # create IMDB equivalent address
+#     imgAddress = 'https://imdb.com/find?q='+movieKeyword.replace(' ', '+')
+#     imgAddress = 'https://imdb.com'+find_text(movieKeyword, find_tag('a', scrape(
+#         imgAddress)))[0].get("href")     # scrape and get first link with KEYWORD in TEXT
+#     # scrape and select first link with 'mediaviewer' in LINK
+#     imageLink = 'https://imdb.com' + \
+#         find_by_keyword('mediaviewer', find_tag(
+#             'a', scrape(imgAddress)))[0].get("href")
+#     # choose image from here
+#     image = find_tag('img', scrape(imageLink))[0].get("src")
+#     # scrape the image bytes
+#     # image = scrape(image).content
+#     # Next three lines compress the image file
+#     # image = Image.open(io.BytesIO(image))
 
-    return image
+#     return image
 
-    if compress:
-        h, w = image.size
-        image = image.resize(
-            (int(h*compression_factor), int(w*compression_factor)), Image.ANTIALIAS)
+#     # if compress:
+#     #     h, w = image.size
+#     #     image = image.resize(
+#     #         (int(h*compression_factor), int(w*compression_factor)), Image.ANTIALIAS)
 
-    savePath = "C:/Users/HP/Desktop/scrapes/movie_website/images/" + \
-        movieKeyword.replace(' ', '_')+'.jpg'
-    image.save(savePath)
-    print(f"IMAGE OF {movieKeyword.upper()} SAVED SUCCESSFULLY")
+#     # savePath = "C:/Users/HP/Desktop/scrapes/movie_website/images/" + \
+#     #     movieKeyword.replace(' ', '_')+'.jpg'
+#     # image.save(savePath)
+#     # print(f"IMAGE OF {movieKeyword.upper()} SAVED SUCCESSFULLY")
 
 
 # OUTPUT
